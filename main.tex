@@ -1,0 +1,67 @@
+\documentclass[a4paper,12pt]{article}
+
+% Import dependancies
+\input{preamble}
+\input{lists/abbreviations}
+
+
+% Begin Document
+\begin{document}
+
+    \pagenumbering{roman}
+
+    % Cover Page (no page number)    
+    \input{report/00_coverpage}
+    \newpage
+
+    % Declarations
+    \input{declarations/confidentiality_clause}
+    \newpage
+    \input{declarations/declaration_of_honour}
+    \newpage
+
+    % Abstract
+    \input{abstract/abstract}
+    \newpage
+
+    % Table of Contents    
+    \pagestyle{fancy}
+    \setcounter{page}{2}
+    \tableofcontents
+    \newpage
+
+    % List of Figures
+    \newpage
+    \listoffigures
+    \addcontentsline{toc}{section}{Abbildungsverzeichnis}
+
+    % List of Tables
+    \newpage
+    \listoftables
+    \addcontentsline{toc}{section}{Tabellenverzeichnis}
+
+    % Glossary
+    \newpage
+    \glsaddall
+    \printglossary[type=\acronymtype, title=Abkürzungsverzeichnis]
+    
+    % Main Body
+    \newpage
+    \pagenumbering{arabic}
+
+    \input{report/01_einleitung}
+    \input{report/02_theoretischer_hintergrund}
+    \input{report/03_praxisteil}
+    \input{report/04_zusammenfassung_ausblick}
+
+    % References
+    \newpage
+    \begin{flushleft}
+    \printbibliography
+    \end{flushleft}
+
+    % Appendix
+    \newpage
+    \input{appendices/appendix_01}
+    
+\end{document}

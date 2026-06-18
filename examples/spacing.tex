@@ -1,0 +1,47 @@
+%%%%%%%%%%%
+% Spacing %
+%%%%%%%%%%%
+
+
+% Horizontal Spacing
+
+% Fixed distances
+Standard\quad Text % 1em space (width of an 'M')
+Double\qquad Space % 2em space
+Custom\hspace{2cm}Distance % Specific value (cm, mm, pt, in)
+Thin\,Space % Very subtle distance
+
+% Flexible horizontal space (pushes text to the margins)
+Left side \hfill Right side
+
+
+% Vertical Spacing
+
+% Standardized relative skips
+Text above \smallskip \\ Text below (small skip)
+Text above \medskip \\ Text below (medium skip)
+Text above \bigskip \\ Text below (big skip)
+
+% Exact vertical distance
+\vspace{1.5cm} % Adds 1.5cm of vertical space
+
+% Fill vertical space (pushes remaining content to the bottom of the page)
+% \vspace{\fill} 
+
+
+% Line Spacing (requires \usepackage{setspace})
+
+{\singlespacing This is a block of text with single line spacing. It is the default for most documents.}
+
+{\onehalfspacing This is a block of text with 1.5 line spacing. Often used for better readability in academic papers.}
+
+{\doublespacing This is a block of text with double line spacing. Great for leaving room for manual corrections.}
+
+
+% Paragraph Formatting
+
+\noindent This paragraph will not be indented at the start.
+
+% Global settings (usually placed in the preamble)
+% \setlength{\parindent}{0pt} % Disables indentation for all paragraphs
+% \setlength{\parskip}{1em}   % Adds a fixed gap between all paragraphs

@@ -1,0 +1,61 @@
+% Unordered list
+\begin{itemize}
+    \item First item
+    \item Second item
+    \item Third item
+    \item Fourth item
+    \item Fifth item
+\end{itemize}
+% To change label use \item[label]
+
+% Ordered list
+\begin{enumerate}
+    \item First item
+    \item Second item
+    \item Third item
+    \item Fourth item
+    \item Fifth item
+\end{enumerate}
+
+% Nested list
+\begin{enumerate}
+   \item First item
+   \begin{itemize}
+        \item First sub-item
+        \item Second sub-item
+        \begin{description}
+        \item[Note:] Describing something
+        \end{description}
+   \end{itemize}
+   \item Second item
+\end{enumerate}
+
+% Nested enumerated list (also possible with itemize)
+\begin{enumerate}
+    \item First level item
+    \item First level item
+    \begin{enumerate}
+        \item Second level item
+        \item Second level item
+        \begin{enumerate}
+            \item Third level item
+            \item Third level item
+            \begin{enumerate}
+                \item Fourth level item
+                \item Fourth level item
+            \end{enumerate}
+        \end{enumerate}
+    \end{enumerate}
+ \end{enumerate}
+
+% Description
+\begin{description}
+   \item This is an entry \textit{without} a label.
+   \item[Something short] A short one-line description.
+   \item[Something long] A much longer description. Lorem ipsum dolor sit amet,
+                         consetetur sadipscing elitr, sed diam nonumy eirmod
+                         tempor invidunt ut labore et dolore magna aliquyam erat,
+                         sed diam voluptua. At vero eos et accusam et justo duo
+                         dolores et ea rebum. Stet clita kasd gubergren, no sea
+                         takimata sanctus est Lorem ipsum dolor sit amet.
+\end{description}

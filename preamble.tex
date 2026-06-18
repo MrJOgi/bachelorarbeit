@@ -1,0 +1,94 @@
+% ----------------------------------------------------
+% Encoding, Language, and Fonts
+% ----------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+
+% ----------------------------------------------------
+% Layout and Style
+% ----------------------------------------------------
+\usepackage[a4paper,margin=3cm, headheight=1.7cm, headsep=0.7cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,      % Allows link breaking
+    colorlinks=true,      % Colors the text of the links instead of drawing a box
+    linkcolor=black,      % Color of internal links (sections, ToC)
+    citecolor=black,      % Color of citations
+    filecolor=black,      % Color of file links
+    urlcolor=blue         % Color of external links (URLs) - blue is standard
+}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\captionsetup{
+    font=small,           % Reduces font size
+}
+
+% Comment out if second and subsequent text passages of a section need to be indented without vertical spacing
+\usepackage{parskip}
+
+\usepackage{listings}
+\usepackage{ulem}
+\usepackage{tabularray}
+
+% References and Citations
+\usepackage[style=ieee,backend=biber]{biblatex}
+\addbibresource{bibliography.bib}
+
+% Custom commands
+\input{util/figures}
+\input{util/tables}
+\input{util/constants}
+
+% Header & Footer
+\fancyhf{}
+\pagestyle{fancy}
+\fancyhead[L]{\projecttitle}
+% or \fancyhead[L]{\includegraphics[height=1.5cm, width=4cm, keepaspectratio]{figures/secondary_logo}}
+\fancyhead[C]{}
+\fancyhead[R]{\includegraphics[height=1.5cm, width=4cm, keepaspectratio]{figures/main_logo}}
+\fancyfoot[C]{\thepage}
+\pagestyle{fancy} 
+
+% Penalise Orphaned and Widowed Lines
+%\interlinepenalty=10000
+\widowpenalty10000
+\clubpenalty10000
+
+% Rotate Content
+\usepackage{rotating}
+\usepackage{pdflscape}
+
+% Glossaries and acronyms
+\usepackage[toc, acronym, nonumberlist]{glossaries}
+\makeglossaries
+
+\usepackage{titlesec}
+% EITHER point after paragraph title
+\titleformat{\paragraph}[runin]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}[.]
+% OR New line after \paragraph title
+%\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}[]
+%\titlespacing*{\paragraph}{0pt}{1em}{0.5em}
+
+% Smaller (50%) spacing for sections 
+%\titlespacing*{\section}{0pt}{1.75ex plus 1ex minus .2ex}{1.2ex plus .2ex}
+%\titlespacing*{\subsection}{0pt}{1.6ex plus 1ex minus .2ex}{0.8ex plus .2ex}
+%\titlespacing*{\subsubsection}{0pt}{1.6ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+
+% Package for command declaration
+\usepackage{xparse}
+
+% Figure caption left aligned
+% \usepackage[justification=raggedright, singlelinecheck=false]{caption}

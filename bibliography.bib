@@ -1,0 +1,113 @@
+%%%%%%%%%%%%%%
+% References %
+%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%
+% Examples %
+%%%%%%%%%%%%
+
+% @online is used for websites and digital resources that don't fit traditional categories.
+% Mandatory fields: author OR editor, title, year/date, url
+@online{db_engines,
+    author       = {{Red Gate Software Ltd}},
+    title        = {DB-Engines Ranking},
+    organization = {Db-engines.com},
+    year         = {2026},
+    url          = {https://db-engines.com},
+    urldate      = {2026-03-10}
+}
+
+% @inbook is used for a specific chapter or a numbered part of a book.
+% Mandatory fields: author OR editor, title, chapter OR pages, publisher, year
+@inbook{tanenbaum2021networks,
+    author    = {Andrew S. Tanenbaum and David J. Wetherall},
+    title     = {The Data Link Layer},
+    booktitle = {Computer Networks},
+    edition   = {6},
+    publisher = {Pearson},
+    year      = {2021},
+    chapter   = {3},
+    pages     = {185--240},
+    address   = {Boston, MA},
+    isbn      = {978-0137523214}
+}
+
+% @techreport is used for reports, white papers, or standards issued by institutions.
+% Mandatory fields: author, title, institution, year
+@techreport{rfc4880,
+    author       = {Hal Finney and Lutz Donnerhacke and Jon Callas and Rodney L. Thayer and Daphne Shaw},
+    title        = {{OpenPGP Message Format}},
+    institution  = {Internet Engineering Task Force (IETF)},
+    year         = {2007},
+    month        = nov,
+    number       = {4880},
+    series       = {Request for Comments},
+    publisher    = {RFC Editor},
+    howpublished = {RFC 4880},
+    pagetotal    = {90},
+    doi          = {10.17487/RFC4880},
+    url          = {https://www.rfc-editor.org}
+}
+
+% @misc is used as a fallback for items that do not fall into any other category.
+% Mandatory fields: none (usually author, title, year/howpublished are used)
+@misc{goldberg_otr_v3,
+    author       = {Ian Goldberg and Nikita Borisov},
+    title        = {Off-the-Record Messaging Protocol version 3},
+    howpublished = {\url{https://otr.cypherpunks.ca}},
+    year         = {2012},
+    note         = {Accessed: 2026-02-16},
+}
+
+% @inproceedings is used for articles or papers published in conference proceedings.
+% Mandatory fields: author, title, booktitle, year
+@inproceedings{cremers_session_handling_2023,
+    author    = {Cas Cremers and Charlie Jacomme and Aurora Naska},
+    title     = {Formal Analysis of {Session-Handling} in Secure Messaging: Lifting Security from Sessions to Conversations},
+    booktitle = {32nd USENIX Security Symposium (USENIX Security 23)},
+    year      = {2023},
+    pages     = {1235--1252},
+    publisher = {USENIX Association},
+    address   = {Anaheim, CA},
+    month     = aug,
+    doi       = {10.5555/3615865.3615951},
+    url       = {https://www.usenix.org}
+}
+
+% @article is used for papers published in scientific journals or magazines.
+% Mandatory fields: author, title, journal, year
+@article{garcia2025efficiency,
+    title   = {Experimental Analysis of Efficiency of MLS for Multiple Delivery Services},
+    author  = {Garc{\'i}a-Gonz{\'a}lez, Juan and P{\'e}rez, Manuel and Mart{\'i}nez, Ana},
+    journal = {arXiv preprint arXiv:2502.18303},
+    year    = {2025},
+    url     = {https://arxiv.org}
+}
+
+% @phdthesis is used for doctoral dissertations.
+% Mandatory fields: author, title, school, year
+@phdthesis{mustermann2024,
+    author = {Max Mustermann},
+    title  = {Security in Messaging Protocols},
+    school = {TU Darmstadt},
+    year   = {2024}
+}
+
+% @incollection is used for an independent contribution within a larger edited collection/book.
+% Mandatory fields: author, title, booktitle, publisher, year
+@incollection{petersen2023messaging,
+    author    = {Jan Petersen},
+    title     = {End-to-End Encryption in Practice},
+    booktitle = {Modern Cryptography and Network Security},
+    publisher = {Springer Nature},
+    year      = {2023},
+    editor    = {Maria Schmidt and Klaus Weber},
+    series    = {Lecture Notes in Computer Science},
+    volume    = {14210},
+    pages     = {45--62},
+    address   = {Berlin, Heidelberg},
+    doi       = {10.1007/978-3-031-12345-6_3}
+}

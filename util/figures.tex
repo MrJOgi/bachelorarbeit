@@ -1,0 +1,13 @@
+% Custom figure command \fig
+% Call like this ([] optional, {} mandatory)
+% \fig[h][0.5]{figures/main_logo}{Bildunterschrift}{example_figure}
+% \fig for a centered and \fig* for a left-aligned figure
+\NewDocumentCommand{\fig}{s O{h} O{1.0} m m m}{%
+    \begin{figure}[#2]
+        \IfBooleanF{#1}{\centering}
+        \includegraphics[width=#3\linewidth]{#4}
+        \vspace{0.375ex}
+        \caption{#5}
+        \label{fig:#6}
+    \end{figure}
+}

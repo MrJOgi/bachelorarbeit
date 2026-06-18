@@ -1,0 +1,11 @@
+\newcommand{\projecttitleone}{[Titel]}
+\newcommand{\projecttitletwo}{[der Arbeit]}
+
+% Project title with space if an asterisk is used, otherwise with a line break
+\NewDocumentCommand{\projecttitle}{s}{%
+    \projecttitleone
+    \IfBooleanTF{#1}%
+        { }%
+        {\newline}%
+    \projecttitletwo
+}
