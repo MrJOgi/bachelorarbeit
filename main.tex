@@ -14,6 +14,7 @@
     \input{report/00_coverpage}
     \newpage
 
+    \iffalse
     % Declarations
     \input{declarations/confidentiality_clause}
     \newpage
@@ -21,8 +22,9 @@
     \newpage
 
     % Abstract
-    %\input{abstract/abstract}
-    %\newpage
+    \input{abstract/abstract}
+    \newpage
+    \fi
 
     % Table of Contents    
     \pagestyle{fancy}
@@ -30,6 +32,7 @@
     \tableofcontents
     \newpage
 
+    \iffalse
     % List of Figures
     \newpage
     \listoffigures
@@ -44,15 +47,19 @@
     \newpage
     \glsaddall
     \printglossary[type=\acronymtype, title=Abkürzungsverzeichnis]
+    \fi
     
     % Main Body
     \newpage
     \pagenumbering{arabic}
 
     \input{report/01_einleitung}
-    \input{report/02_theoretischer_hintergrund}
-    \input{report/03_praxisteil}
-    \input{report/04_zusammenfassung_ausblick}
+    \input{report/02_allianz}
+    \input{report/03_theoretischer_hintergrund}
+    \input{report/04_projekt}
+    \input{report/05_fragestellung}
+    \input{report/06_zusammenfassung}
+    \input{report/07_ausblick}
 
     % References
     \newpage
