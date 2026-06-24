@@ -1,0 +1,11 @@
+% A command for the first use of a glossary entry
+% \firstgls{abbrv} singular, \firstgls*{abbrv} plural
+\NewDocumentCommand{\firstgls}{s m}{%
+    \IfBooleanTF{#1}{%
+        % With a star (plural):
+        \glsdisp{#2}{\textit{\acrlongpl*{#2}} (\acrshortpl*{#2})}%
+    }{%
+        % Without a star (singular)
+        \glsdisp{#2}{\textit{\glsentrylong{#2}} (\glsentryshort{#2})}%
+    }%
+}
