@@ -1,12 +1,15 @@
 % Syntax: \hlinestable{Label}{Caption}{Column definition}{Content}
-\NewDocumentCommand{\hlinestable}{m m m +m}{
-    \begin{table}[h]
+\NewDocumentCommand{\hlinestable}{m m m +m O{h}}{
+    \begin{table}[#5]
         \centering
         % Nutze tblr (statt talltblr), um Konflikte mit der Caption-Logik zu vermeiden
         \begin{tblr}{
             colspec = {#3},
-            hline{1,2,Z} = {0.08em},
-            row{1} = {font=\bfseries},
+            hline{1-Z} = {0.04em},
+            vline{1-Z} = {0.04em},
+            row{1} = {font=\bfseries, rowsep=4pt},
+            row{2-Z} = {rowsep=2.5pt},
+            rows = {valign=m},
         }
             #4
         \end{tblr}
